@@ -1,0 +1,8 @@
+string= input('enter any string with upper and lowercase mixed:\t')
+new = ''
+for i in string:
+	if i.islower():
+		new= new+i.upper()
+	else:
+		new= new+i.lower()
+print (new)
