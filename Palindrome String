@@ -1,0 +1,11 @@
+string= input('enter string to test Palindrome:\t')
+l=0
+r=len(string)-1
+while(l<r):
+	if string[l]!=string[r]:
+		print ('not palindrome')
+		break
+	l=l+1
+	r=r-1
+else:
+	print ('Palindrome String')
