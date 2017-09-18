@@ -1,0 +1,7 @@
+number= int(input('enter any number:\t'))
+result=0
+while number>0:
+	rem=number%10
+	number = number//10
+	result += rem
+print ('sum of digits=\t',result)
