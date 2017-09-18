@@ -1,0 +1,20 @@
+list_1=[1,2,5,-7,2,3]
+for i in range(len(list_1)):
+	if list_1[i]<0:
+		num=i
+		break
+new_1=[]
+new_2=[]
+sum_1=0
+sum_2=0
+for j in range(0,num):
+	new_1.append(list_1[j])
+	sum_1=sum_1+list_1[j]
+for j in range(num+1,len(list_1)):
+	new_2.append(list_1[j])
+	sum_2=sum_2+list_1[j]
+
+if sum_1>sum_2:
+	print(new_1)
+else:
+	print (new_2)
