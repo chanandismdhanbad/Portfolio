@@ -1,0 +1,12 @@
+sentence= input('Enter any sentence:\t')
+vowel=0
+consonent=0
+for i in sentence:
+	if i in 'aeiouAEIOU':
+		vowel=vowel+1
+	elif i in ',. !\'':
+		pass
+	else:
+		consonent= consonent+1
+print ('no. of vowels=\t',vowel)
+print ('no. of consonents=\t',consonent)
