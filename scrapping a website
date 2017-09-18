@@ -1,0 +1,37 @@
+from urllib.request import urlopen as urlreq
+from bs4 import BeautifulSoup as butsoup
+
+file_name = "result_1.csv"
+f = open(file_name, "w")
+
+headers = "Product Name, Price, Description, URL\n"
+f.write(headers)
+
+for i in range (1,5):
+	my_url= 'https://www.liveyoursport.com/heart-rate-monitors-1/?search_query=&page='+str(i)+'&limit=36&sort=featured&category=2828&is_category_page=1'
+	uClient = urlreq(my_url)
+	page_html = uClient.read()
+	uClient.close()
+
+	#parsing of HTML
+	page_soup= butsoup(page_html,"html.parser")
+
+	#grab details 
+	containers = page_soup.findAll("div",{"class":"ProductDetails"})
+
+
+
+	for item in containers:
+		Product_Name = item.a.text.strip()
+#product name is not mentioned on website, so I have used same product name and description
+		Price = item.em.text
+		Description = item.a.text.strip()
+		url = item.a['href'].strip()
+
+		print ("Product_Name: " + Product_Name)
+		print ("Price: " + Price)
+		print ("Description: " + Description)
+		print ("url: " + url)
+	
+		f.write(Product_Name.replace("*","") + "," + Price.replace(",","") + "," + Description.replace("*","") + "," + url + "\n")
+f.close()
