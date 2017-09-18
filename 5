@@ -1,0 +1,13 @@
+string = input('Enter the string:\t')
+sub = input('Enter the substring:\t')
+
+present=0
+for i in range(len(string)):
+	new=i+len(sub)
+	if string[i:new]==sub:
+		present=1
+		break
+if present==1:
+	print ('Yes, \''+sub+'\' is present in the string' )
+else:
+	print ('No, \''+sub+'\' is not present in the string' )
