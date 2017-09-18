@@ -1,0 +1,16 @@
+string= input('enter string to test Palindrome:\t')
+
+count =0
+for i in string:
+	count= count+1
+
+l=0
+r=count-1
+while(l<r):
+	if string[l]!=string[r]:
+		print ('not palindrome')
+		break
+	l=l+1
+	r=r-1
+else:
+	print ('Palindrome String')
