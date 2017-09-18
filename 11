@@ -1,0 +1,9 @@
+string = input('enter any string:\t')
+
+def rever(new):
+	if new=='':
+		return new
+	else:
+		return new[-1]+rever(new[:-1])
+
+print (rever(string))
