@@ -1,0 +1,46 @@
+queue= []
+
+def enQ():
+	queue.append(input('ENTER ANY STRING:\t').strip())
+
+def dQ():
+	if (len(queue)==0):
+		print ('\nQUEUE is Empty!!!')
+	else:
+		print ('\nRemoved [',queue.pop(0),']')
+
+def view():
+	print (queue)
+
+options={'e':enQ, 'd':dQ, 'v':view}
+
+def show_menu():
+	pr='''
+(E)nqueue
+(D)equeue
+(V)iew
+(Q)uit
+
+ENTER CHOICE:\t	'''
+
+	while(True):
+		while(True):
+			try:
+				choice=input(pr).strip().lower()
+			except(EOFError,KeyboardInterrupt,IndexError):
+				choice='q'
+
+			print ('\nYour choice is:\t',choice)
+
+			if(choice not in 'edvq'):
+				print('ENTER VALIED CHOICE!!!!')
+			else:
+				break
+
+		if(choice=='q'):
+			break
+		
+		options[choice]()
+
+if(__name__=='__main__'):
+	show_menu()
