@@ -1,0 +1,12 @@
+string_1= input('Énter any string to check Palindrome:\t')
+
+def rev(string_2):
+	if len(string_2)==0:
+		return string_2
+	else:
+		return rev(string_2[1:])+string_2[0]
+
+if string_1==rev(string_1):
+	print ('Yes, String is Palindrome')
+else:
+	print ('String is not Palindrome')
