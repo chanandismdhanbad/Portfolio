@@ -1,0 +1,8 @@
+str_1=input('enter any string:\t')
+
+def rever(str_2):
+	if len(str_2)==0:
+		return str_2
+	else:
+		return rever(str_2[1:])+str_2[0]
+print (rever(str_1))
