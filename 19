@@ -1,0 +1,9 @@
+string_1 = list(input('enter any sentence:\t').lower().replace(' ',''))
+
+list_1=[]
+
+for i in string_1:
+	list_1.append(string_1.count(i))
+
+indx= list_1.index(max(list_1))
+print ('\''+string_1[indx]+'\' is the highest frequescy character')
