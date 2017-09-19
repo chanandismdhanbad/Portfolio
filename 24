@@ -1,0 +1,7 @@
+string_1 = input('Enter any sentence:\t')
+new=[]
+for words in string_1.split():
+	if words[len(words)-1]=='s':
+		new.append(words)
+
+print (new)
