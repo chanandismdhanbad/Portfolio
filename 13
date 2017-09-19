@@ -1,0 +1,10 @@
+string_1=input('enter any sting:\t')
+let=''
+def frst_cap(string_1,let,i):
+	let=string_1[i]
+	if let.isupper():
+		return let
+	else:
+		return frst_cap(string_1,let,i+1)
+
+print (frst_cap(string_1,let,0))
