@@ -1,0 +1,4 @@
+string_1= input('Enter any sentence:\t')
+string_2= input('Enter word to delete from above sentence:\t')
+
+print (string_1.replace(string_2,''))
