@@ -1,0 +1,14 @@
+string_1= input('enter first sentence:\t')
+string_2= input('enter second sentence:\t')
+
+string_3= string_1+' '+string_2
+
+list_1=[]
+for words in string_3.split():
+	list_1.append(words)
+
+new_string=''
+for i in sorted(list_1):
+	new_string = new_string+' '+i
+
+print (new_string.strip())
