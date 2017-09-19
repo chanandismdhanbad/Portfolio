@@ -1,0 +1,10 @@
+string_1= input('Énter any string to copy:\t')
+
+def cop(string_2):
+	if len(string_2)==0:
+		return string_2
+	else:
+		return string_2[0]+cop(string_2[1:])
+
+new_str= (cop(string_1))
+print ('new string=\t'+new_str)
