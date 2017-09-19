@@ -1,0 +1,13 @@
+string_1 = input('Enter any string:\t')
+new_string=''
+
+def rever(new_word):
+	if len(new_word)==0:
+		return new_word
+	else:
+		return rever(new_word[1:])+new_word[0]
+
+for words in string_1.split():
+	new_string = new_string+' '+rever(words)
+
+print (new_string.strip())
