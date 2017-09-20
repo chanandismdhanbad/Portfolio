@@ -1,0 +1,15 @@
+str_1 = input('enter first string:\t')
+str_2 = input('enter second string:\t')
+for i in str_2:
+	if i in str_1:
+		char_1=i
+		break
+
+list_1 = list(str_1)
+new = ''
+
+indx = list_1.index(char_1)
+for i in range (indx,len(list_1)):
+	new=new+list_1[i]
+
+print (new)
