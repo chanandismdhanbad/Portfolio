@@ -1,0 +1,5 @@
+import sys
+
+print ('number of words=\t',len(sys.argv)-1)
+
+#to run the program on cmd, type:<program_name.py> <sentence>
