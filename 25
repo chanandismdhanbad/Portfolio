@@ -1,0 +1,6 @@
+string_1 = input('Enter any string:\t')
+ascii_sum = 0
+for i in string_1:
+	ascii_sum += ord(i)
+
+print ('sum of ASCII of characters=\t',ascii_sum)
