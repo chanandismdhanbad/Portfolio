@@ -1,0 +1,14 @@
+string_1 = input('enter any sentence:\t')
+
+list_1 = []
+for words in string_1.split():
+	list_1.append(words)
+print (list_1)
+
+count = 0
+for i in list_1:
+	if list_1.count(i)>1:
+		pass
+	else:
+		count = count+1
+print ('number of unique words=\t',count)
