@@ -1,0 +1,10 @@
+string_1 = input('enter any string:\t')
+
+new_str = ''
+for i in sorted(string_1):
+	if i in new_str:
+		pass
+	else:
+		new_str = new_str + i
+
+print (new_str)
