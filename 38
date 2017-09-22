@@ -1,0 +1,11 @@
+string_1 = input('enter any string:\t')
+string_2 = input('enter the character to check first and last occurance:\t')
+
+indx=[]
+i=0
+while i<len(string_1):
+	if string_1[i]==string_2:
+		indx.append(i)
+	i += 1
+
+print ('the first and last occurance index of \''+string_2+'\' is ',min(indx),' and ',max(indx))
