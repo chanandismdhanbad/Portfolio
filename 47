@@ -1,0 +1,21 @@
+string_1 = input('enter first string:\t')
+string_2 = input('enter second string:\t')
+
+list_1=[]
+for i in string_1.split():
+	for j in string_2.split():
+		new = i+j
+		list_1.append(new)
+
+for i in string_2.split():
+	for j in string_1.split():
+		new = i+j
+		list_1.append(new)
+
+list_2=[]
+for i in list_1:
+	if i in list_2:
+			pass
+	else:
+		list_2.append(i)
+print (list_2)
