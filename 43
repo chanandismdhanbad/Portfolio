@@ -1,0 +1,9 @@
+string_1 = list(input('enter any string:\t'))
+string_2 = list(input('enter substring to count:\t'))
+
+leng_2= len(string_2)
+num=0
+for i in range(len(string_1)):
+	if string_1[i:i+leng_2]==string_2:
+		num=num+1
+print ('frequency=\t',num)
