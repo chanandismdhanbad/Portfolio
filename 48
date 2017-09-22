@@ -1,0 +1,11 @@
+string_1 = input('enter any string:\t')
+string_2=''
+for i in sorted(string_1):
+	if i==' ':
+		pass
+	elif i in string_2:
+		pass
+	else:
+		string_2 = string_2+i
+
+print (string_2)
