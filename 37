@@ -1,0 +1,18 @@
+string_1 = input('enter any sentence:\t')
+
+list_1 = []
+for words in string_1.split():
+	list_1.append(words)
+
+
+string_2 = input('enter any string to search:\t')
+indx=[]
+i=0
+while i<len(list_1):
+	if list_1[i]==string_2:
+		indx.append(i)
+	i=i+1
+print ('\''+string_2+'\' is at index ',indx)
+
+string_3 = input('enter the word to insert:\t')
+print (string_1.replace(string_2,string_3))
