@@ -1,0 +1,25 @@
+string_1 = input('enter any sentence:\t')
+list_1=[]
+
+for i in string_1.split():
+	list_1.append(i)
+
+def rever(word):
+	if len(word)==0:
+		return word
+	else:
+		return rever(word[1:])+word[0]
+
+list_2=[]
+for i in list_1:
+	if i==rever(i):
+		list_2.append(i)
+
+
+list_3=[]
+for i in list_2:
+	list_3.append(len(i))
+
+
+print ('Smallest Palindrome is:\t',list_2[list_3.index(min(list_3))])
+print ('Largest Palindrome is:\t',list_2[list_3.index(max(list_3))])
