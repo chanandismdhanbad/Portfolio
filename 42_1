@@ -1,0 +1,8 @@
+string_1 = list(input('enter any sentence:\t'))
+num=0
+
+for i in string_1:
+	if i==' ':
+		num=num+1
+
+print (num+1)
