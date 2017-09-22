@@ -1,0 +1,6 @@
+string_1 = input('enter any sentence:\t')
+num=0
+for i in string_1.split():
+	num = num+1
+
+print (num)
