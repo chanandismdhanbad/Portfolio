@@ -1,0 +1,9 @@
+string_1 = input('enter any string:\t')
+list_1 = []
+for i in string_1.split():
+	list_1.append(i)
+
+string_2=''
+for i in sorted(list_1):
+	string_2= string_2+' '+i
+print (string_2.strip())
