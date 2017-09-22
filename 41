@@ -1,0 +1,13 @@
+string_1 = input('enter any sentence:\t')
+
+list_1=[]
+for words in string_1.split():
+	list_1.append(words)
+
+string_2= ''
+for i in list_1:
+	if string_1.count(i)>1:
+		pass
+	else:
+		string_2 = string_2+' '+i
+print (string_2.strip())
