@@ -1,0 +1,15 @@
+string_1 = list(input('enter first string:\t'))
+string_2 = list(input('enter second string:\t'))
+len_1 = len(string_1)
+len_2 = len(string_2)
+indx=[]
+
+for i in range(len(string_1)):
+	if string_1[i:i+len_2]==string_2:
+		indx.append(i)
+
+if len(indx)>0:
+	print ('total matches found:\t',len(indx))
+	print ('match found at indexes:\t',indx)
+else:
+	print ('match not found')
