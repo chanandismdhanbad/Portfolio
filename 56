@@ -1,0 +1,8 @@
+string_1 = input('enter any sentence:\t')
+
+print ('========words with consecutive vowels=========')
+for words in string_1.split():
+	list_1 = list(words.lower())
+	for i in range(len(list_1)-1):
+		if (list_1[i] in 'aeiou') and (list_1[i+1] in 'aeiou'):
+			print (words)
