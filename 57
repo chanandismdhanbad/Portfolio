@@ -1,0 +1,11 @@
+string_1 = input('enter any sentence:\t')
+list_1=[]
+for i in string_1.split():
+	list_1.append(i)
+
+list_2=[]
+for i in list_1:
+	list_2.append(len(i))
+
+print ('largest word is :\t',list_1[list_2.index(max(list_2))])
+print ('smallest word is :\t',list_1[list_2.index(min(list_2))])
