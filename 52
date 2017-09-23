@@ -1,0 +1,17 @@
+string_1 = list(input('enter any string:\t'))
+char_1 = input('enter any character to check:\t')
+
+indx = []
+num = 0
+for i in range(len(string_1)):
+	if string_1[i]==char_1:
+		indx.append(i)
+		num = num+1
+	else:
+		pass
+
+if char_1 in string_1:
+	print ('\''+char_1+'\' is present in above string \nfrequence=\t',num)
+	print ('\''+char_1+'\' is present on indexes:\t',indx)
+else:
+	print ('\''+char_1+'\' is not present in above string')
