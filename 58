@@ -1,0 +1,9 @@
+string_1 = list(input('enter any sentence:\t'))
+
+list_1=[]
+for i in string_1:
+	list_1.append(string_1.count(i))
+print (list_1)
+
+print ('most repeated character is :\t',string_1[list_1.index(max(list_1))])
+print ('least repeated character is :\t',string_1[list_1.index(min(list_1))])
