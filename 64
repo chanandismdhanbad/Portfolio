@@ -1,0 +1,44 @@
+string_1 = input('enter any number:\t')
+num_1 = int(string_1)
+num_2 = num_1*10
+
+
+result = 0
+list_1 = []
+
+i = num_1+1
+while i<num_2:
+	str_1 = str(num_1)
+	str_i = str(i)
+	new = ''
+	
+  for digits in str_i:
+		if digits not in str_1:
+			result = 0
+			break
+		else:
+			new = new + digits
+			result = 1
+	
+	list_2 = []
+	for chars in str_1:
+		if str_1.count(chars) == new.count(chars):
+			list_2.append('yes')
+		else:
+			list_2.append('no')
+	
+	if result ==1 and 'no' not in list_2:
+		list_1.append(new)
+		break
+		
+	i = i+1
+
+
+fin_list = []
+for nums in list_1:
+	fin_list.append(int(nums))
+
+if (len(fin_list)>=1):
+	print (min(fin_list))
+else:
+	print ('THE NUMBER ENTERED IS LARGEST WITH GIVEN DIGITS!!!!')
