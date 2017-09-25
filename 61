@@ -1,0 +1,20 @@
+string_1 = input('Enter string with atleast one number:\t')
+
+numbers = []
+
+for words in string_1.split():
+	num = ''
+	for i in words:
+		if i in '0123456789':
+			num = num+i
+		else:
+			pass
+	if (num==''):
+		pass
+	else:
+		numbers.append(num)
+
+for nums in numbers:
+	new = int(nums)
+	sqr = new*new
+	print ('square of ',new,' =\t',sqr)
