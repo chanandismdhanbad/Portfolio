@@ -1,0 +1,16 @@
+num = int(input('Enter any enteger:\t'))
+num_1 = num
+rem_li=[]
+while num_1>=1:
+	rem = num_1%10
+	rem_li.append(rem)
+	num_1 = num_1//10
+
+li_len = len(rem_li)-1
+
+fin_sum = 0
+for i in rem_li:
+	prod = i*(10**li_len)
+	fin_sum = fin_sum+prod
+	li_len = li_len-1
+print ('Reverse of ',num,'=\t',fin_sum)
