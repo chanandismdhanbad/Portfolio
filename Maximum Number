@@ -1,0 +1,17 @@
+#input for seize of array
+count = int(input('HOW MANY NUMBERS?\t'))
+nums = []
+new = []
+final = ''
+
+#input of numbers
+for i in range(count):
+	num = input('enter number\t')
+	nums.append(num)
+
+for i in sorted(nums):
+	new.append(i)
+
+for i in new:
+	final = i+final
+print (final)
