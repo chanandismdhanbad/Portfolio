@@ -1,0 +1,45 @@
+import math
+num = int(input('Enter the current position:\t'))
+num_1 = num
+num_2 = num
+
+nearest_prime = []
+distance = []
+
+#defining prime number
+def is_prime(n):
+    prime = True
+    new = int(math.sqrt(n))
+    if n < 2:
+        prime = False
+    else:
+        for i in range(2,new+1):
+            if n % i == 0:
+                prime = False
+    if prime == True:
+    	nearest_prime.append(n)
+    return nearest_prime
+
+#special check for 0
+if num==0:
+	print (2)
+else:
+	#checking smaller value than given
+	while num_1>=0:
+		nearest_prime = is_prime(num_1)
+		if len(nearest_prime)>0:
+			break
+		num_1 = num_1-1
+	
+	#checking larger value than given
+	while num_2<=2*num:
+		nearest_prime = is_prime(num_2)
+		if len(nearest_prime)>1:
+			break
+		num_2 = num_2+1
+	
+	#calculating distance
+	for i in nearest_prime:
+		dist = num-i
+		distance.append(abs(dist))
+	print (min(distance))
