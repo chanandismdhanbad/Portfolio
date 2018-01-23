@@ -1,0 +1,22 @@
+li_1 = [2,5,7,11,14,16,17,18,21,24,26,27,32,35]
+print (li_1)
+num = int(input('enter the item to be searched:\t'))
+low = 0
+up = len(li_1)-1
+while low <= up:
+	mid = (low + up)//2
+	if (num>li_1[mid]):
+		low = mid+1
+	elif(num<li_1[mid]):
+		up = mid-1
+	else:
+		indx = mid
+		break
+
+else:
+	indx = -1
+
+if(indx == -1):
+	print ('item not found')
+else:
+	print('item found at position:\t',indx+1)
