@@ -1,0 +1,61 @@
+import os
+import shutil
+from send2trash import send2trash
+
+
+# @author: Chandan Anand
+# @email: chanand.iitdhn@gmail.com
+# @param---- list_1 :- allowed pdf list
+# @param---- directory_list:- list of sub directories
+# @param---- current_files:- list of files in current sub-directory
+# @param---- src:- address of current sub-directory
+# @param---- file_to_trash:- file to be deleted
+
+
+list_1=['hello','java','python','android']
+
+#finding list of path of sub_directories......
+directory_list = []
+for root, dirs, files in os.walk("D:\parent_dir", topdown=False):
+    for name in dirs:
+        directory_list.append(os.path.join(root, name))
+
+
+#parsing each sub-directories
+directory_list_index=0
+for folders in directory_list:
+	current_files=[]
+	src=directory_list[directory_list_index]
+	directory_list_index = directory_list_index+1
+
+	for root,dirs,files in os.walk(folders):
+		for file in files:
+			if file.endswith('.pdf'):
+				#print (os.path.join(file))
+				current_files.append(os.path.join(file))
+	print (current_files)
+	for file_name in list_1:
+		name_with_ext = file_name+'.pdf'
+#		print (name_with_ext)
+		if name_with_ext in current_files:
+			file_to_trash = src+'\\'+ name_with_ext
+#			print (file_to_trash)
+			send2trash(file_to_trash)
+
+#moving remaining files with respective directory to exceptions folder
+directory_list_1 = []
+for root, dirs, files in os.walk("D:\parent_dir", topdown=False):
+    for name in dirs:
+        directory_list_1.append(os.path.join(root, name))
+#print (directory_list_1)
+
+for addresses in directory_list_1:
+	source = addresses+'\.'
+	destination='D:\exceptions'+str(source[len(source)-6:len(source)-2])
+	shutil.move(source,destination)
+
+'''#finding list of names of subdirectories......this part is not required in this code
+sub_dir_name=[]
+for names in range(len(directory_list)):
+	sub_dir_name.append(directory_list[names][len(directory_list[names])-3:])
+print (sub_dir_name)'''
