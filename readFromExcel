@@ -1,0 +1,6 @@
+#put xlsx file in the same directory as the program
+import xlrd
+workbook = xlrd.open_workbook("file_name.xlsx")
+worksheet = workbook.sheet_by_index(0)
+data = worksheet.cell(0,0).value
+print (data)
