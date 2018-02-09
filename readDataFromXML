@@ -1,0 +1,16 @@
+import xml.etree.cElementTree as etree
+
+xmlDoc = open('xml_path_1.xml', 'r')
+xmlDocData = xmlDoc.read()
+xmlDocTree = etree.XML(xmlDocData)
+source_path = []
+dest_path = []
+for sources in xmlDocTree.iter('from'):
+	source_path.append(sources.text)
+for destinations in xmlDocTree.iter('to'):
+	dest_path.append(destinations.text)
+
+path_1 = source_path[0]
+path_2 = dest_path[0]
+print (path_1)
+print(path_2)
