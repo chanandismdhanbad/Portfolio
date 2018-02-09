@@ -1,0 +1,73 @@
+import os
+import shutil
+from send2trash import send2trash
+import xml.etree.cElementTree as etree
+
+
+# @author: Chandan Anand
+# @email: chanand.iitdhn@gmail.com
+# @param---- list_1 :- allowed pdf list
+# @param---- directory_list:- list of sub directories
+# @param---- current_files:- list of files in current sub-directory
+# @param---- src:- address of current sub-directory
+# @param---- file_to_trash:- file to be deleted
+# @param---- xml_path_1.xml is the xml file to read source and destination path
+# @param---- source_path and dest_path are the lists with source addresses and destination addresses
+
+list_1=['hello','java','python','android']
+
+#reading path from excel file
+xmlDoc = open('xml_path_1.xml', 'r')
+xmlDocData = xmlDoc.read()
+xmlDocTree = etree.XML(xmlDocData)
+source_path = []
+dest_path = []
+for sources in xmlDocTree.iter('from'):
+	source_path.append(sources.text)
+for destinations in xmlDocTree.iter('to'):
+	dest_path.append(destinations.text)
+	#here we can itterate through each and every source and destination paths.
+	#But in our current xml file, there is only one source and destination, so simple indexing is used
+
+path_1 = source_path[0]
+path_2 = dest_path[0]
+
+#finding list of path of sub_directories......
+directory_list = []
+for root, dirs, files in os.walk(path_1, topdown=False):
+    for name in dirs:
+        directory_list.append(os.path.join(root, name))
+
+
+#parsing each sub-directories
+directory_list_index=0
+for folders in directory_list:
+	current_files=[]
+	src=directory_list[directory_list_index]
+	directory_list_index = directory_list_index+1
+
+	for root,dirs,files in os.walk(folders):
+		for file in files:
+			if file.endswith('.pdf'):
+				#print (os.path.join(file))
+				current_files.append(os.path.join(file))
+	print (current_files)
+	for file_name in list_1:
+		name_with_ext = file_name+'.pdf'
+#		print (name_with_ext)
+		if name_with_ext in current_files:
+			file_to_trash = src+'\\'+ name_with_ext
+#			print (file_to_trash)
+			send2trash(file_to_trash)
+
+#moving remaining files with respective directory to exceptions folder
+directory_list_1 = []
+for root, dirs, files in os.walk(path_1, topdown=False):
+    for name in dirs:
+        directory_list_1.append(os.path.join(root, name))
+#print (directory_list_1)
+
+for addresses in directory_list_1:
+	source = addresses+'\.'
+	destination=path_2+str(source[len(source)-6:len(source)-2])
+	shutil.move(source,destination)
