@@ -1,0 +1,20 @@
+import pymysql
+db = pymysql.connect("localhost","root","Aopl@123","testdb")
+cursor = db.cursor()
+db.autocommit(True)
+#deleteStatement = sql = "DELETE FROM EMPLOYEE WHERE AGE > '%d'" % (10)
+#cursor.execute(deleteStatement)
+insertStatement = "INSERT INTO employee(FIRST_NAME, LAST_NAME, AGE, SEX, INCOME) VALUES('MAC', 'MOHAN', 20, 'M', 2000)"
+cursor.execute(insertStatement)
+insertStatement = "INSERT INTO employee(FIRST_NAME, LAST_NAME, AGE, SEX, INCOME) VALUES('NARENDRA', 'Verma', 25, 'M', 1000)"
+cursor.execute(insertStatement)
+insertStatement = "INSERT INTO employee(FIRST_NAME, LAST_NAME, AGE, SEX, INCOME) VALUES('AMAR', 'Soni', 26, 'M', 2500)"
+cursor.execute(insertStatement)
+insertStatement = "INSERT INTO employee(FIRST_NAME, LAST_NAME, AGE, SEX, INCOME) VALUES('PRACHI', 'SINGH', 23, 'F', 800)"
+cursor.execute(insertStatement)
+
+selectStatement = "SELECT * FROM EMPLOYEE WHERE INCOME > '%d'" % (1000)
+cursor.execute(selectStatement)
+results = cursor.fetchall()
+print (results)
+db.close()
