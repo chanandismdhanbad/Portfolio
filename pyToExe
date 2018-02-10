@@ -1,0 +1,9 @@
+from distutils.core import setup
+import py2exe
+
+setup(console=['mysqlInsertSelect.py'])
+
+#note:- let the name of this script is "pyToExe.py" and we have to convert the "mysqlInsertSelect.py" file to ".exe" format".
+#to run this script, give command: "python pyToExe.py py2exe"
+#this will create two folders: "__pycache__" and "dist".
+#our exe file will be present in "dist" folder.
