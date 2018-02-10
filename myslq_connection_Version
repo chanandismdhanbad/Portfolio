@@ -1,0 +1,7 @@
+import pymysql
+db = pymysql.connect("localhost","root","Aopl@123","testdb")
+cursor = db.cursor()
+cursor.execute("SELECT VERSION()")
+data = cursor.fetchone()
+print ("Database version:-\t",data)
+db.close()
