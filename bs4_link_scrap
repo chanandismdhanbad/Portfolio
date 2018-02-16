@@ -1,0 +1,9 @@
+from bs4 import BeautifulSoup
+import requests
+
+url="https://www.dataquest.io/blog/web-scraping-tutorial-python/"
+raw_data = requests.get(url)
+data = raw_data.text
+soup = BeautifulSoup(data)
+for links in soup.find_all('a'):
+	print (links.get('href'))
