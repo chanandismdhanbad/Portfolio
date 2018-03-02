@@ -10,7 +10,7 @@ check, there must be <my new service name> present.
 
 example:- To convert "mysqlInsertSelect.exe" as windows services:-
 open cmd as administrator
-give the command:-  sc create "PyToExe" binPath ="D:\programs\dist\mysqlInsertSelect.exe"
+give the command:-  sc create "PyToExe" binPath= "D:\programs\dist\mysqlInsertSelect.exe"
 open run.
 search (services.msc) in run.
 check, there must be "PyToExe" present.
