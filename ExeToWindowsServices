@@ -14,3 +14,8 @@ give the command:-  sc create "PyToExe" binPath ="D:\programs\dist\mysqlInsertSe
 open run.
 search (services.msc) in run.
 check, there must be "PyToExe" present.
+
+
+To delete the service:-
+Give command:-    sc delete <service name>
+If it is not getting deleted, first stop the service with command:-   sc stop <service name> and then delete it with above command.
