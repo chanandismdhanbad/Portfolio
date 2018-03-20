@@ -1,0 +1,19 @@
+#using replace() function
+string_1= input('Enter any sentence:\t')
+string_2= input('Enter word to delete from above sentence:\t')
+
+print (string_1.replace(string_2,''))
+
+
+
+#without using replace() function
+
+str_1 = input('enter any sentence:\t')
+word_1 = input('enter any word:\t')
+new = ''
+for i in str_1.split():
+	if i==word_1:
+		pass
+	else:
+		new = new+' '+i
+print (new.strip())
