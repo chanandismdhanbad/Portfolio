@@ -1,0 +1,7 @@
+str_1 = input('enter any string:\t')
+def copy(str_2):
+	if str_2 == '':
+		return str_2
+	else:
+		return copy(str_2[:-1])+str_2[-1]
+print(copy(str_1))
