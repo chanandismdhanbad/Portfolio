@@ -1,7 +1,0 @@
-set_1= set(input('Enter first string:\t').lower())-set(' ')
-set_2= set(input('Enter second string:\t').lower())-set(' ')
-
-if sorted(set_1)==sorted(set_2):
-	print ('Yes, both strings are Anagrams')
-else:
-	print ('strings are not Anagrams')

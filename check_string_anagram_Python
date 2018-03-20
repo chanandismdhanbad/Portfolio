@@ -1,0 +1,11 @@
+str_1 = input('enter first string:\t')
+str_2 = input('enter second string:\t')
+if len(str_1) == len(str_2):
+	for i in str_1:
+		if i not in str_2:
+			print ('not anagram strings')
+			break
+	else:
+		print ('anagram strings')
+else:
+	print ('not anagram strings')
