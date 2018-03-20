@@ -1,0 +1,10 @@
+str_1 = input('enter any string:\t')
+indx = ''
+def first_cap(str_2,indx,i):
+	indx = str_2[i]
+	if indx.isupper():
+		return indx
+	else:
+		return first_cap(str_2,indx,i+1)
+
+print (first_cap(str_1,indx,0))
