@@ -1,0 +1,7 @@
+str_1 = list(input('enter any string:\t'))
+result_sum = 0
+
+for i in str_1:
+	if i in '0123456789':
+		result_sum = result_sum+int(i)
+print ('sum of digits in the given sentence=\t',result_sum)
