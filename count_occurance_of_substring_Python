@@ -1,0 +1,9 @@
+str_1 = input('enter any string:\t')
+str_2 = input('enter any small string:\t')
+len_1 = len(str_1)
+len_2 = len(str_2)
+count = 0
+for i in range(len_1):
+	if str_1[i:i+len_2]==str_2:
+		count += 1
+print ('number of occurances of substring=\t',count)

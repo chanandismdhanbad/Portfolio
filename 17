@@ -1,9 +1,0 @@
-string = input('Enter first string:\t')
-sub_str = input('Enter second string:\t')
-count = 0
-for i in range(len(string)):
-	indx=i+len(sub_str)
-	if string[i:indx]==sub_str:
-		count = count+1
-
-print ('No. of occurances=\t',count)
