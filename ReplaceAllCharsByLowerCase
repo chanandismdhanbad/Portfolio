@@ -1,0 +1,5 @@
+str_1 = list(input('enter any string:\t'))
+new = ''
+for i in str_1:
+	new += i.lower()
+print (new)

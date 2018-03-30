@@ -1,3 +1,0 @@
-string_1 = input('Enter any string:\t')
-string_1= string_1.lower()
-print (string_1) 
