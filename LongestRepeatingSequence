@@ -1,0 +1,18 @@
+str_1 = input('enter any string:\t')
+list_1 = list(str_1)
+len_1 = len(str_1)
+i = 0
+new_list = []
+
+while i<=len_1-1:
+	string = list_1[i]
+	for j in range(i+1,len_1):
+		string += list_1[j]
+		if str_1.count(string)>1:
+			new_list.append(string)
+	i=i+1
+result = ''
+for words in new_list:
+	if len(words)>len(result):
+		result = words
+print ('longest repeating subsequence = ',result)
