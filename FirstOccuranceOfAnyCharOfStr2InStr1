@@ -1,0 +1,7 @@
+str_1 = input('enter first string:\t')
+str_2 = list(input('enter second string:\t'))
+for i in str_2:
+	if i in str_1:
+		print ('first occurance character=\t',i)
+		print ('index =',str_1.index(i))
+		break

@@ -1,9 +1,0 @@
-string_1 = list(input('enter any sentence:\t'))
-string_2 = input('enter any string:\t')
-string_3 = input('enter character from above string to search in first sentence:\t')
-for i in range(len(string_1)):
-	if string_1[i]==string_3:
-		print ('First occurance of \''+string_3+'\' is at position:\t:',i+1)
-		break
-if string_3 not in string_1:
-	print ('character not found')
