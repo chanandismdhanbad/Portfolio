@@ -1,0 +1,8 @@
+str_1 = list(input('enter any string:\t'))
+str_2 = input('enter the string to be inserted:')
+indx = int(input('enter the index of insertion:\t'))
+str_1.insert(indx,str_2)
+result = ''
+for i in str_1:
+	result += i
+print (result)
