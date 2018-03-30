@@ -1,0 +1,7 @@
+str_1 = input('enter first string:\t')
+str_2 = input('enter second string:\t')
+new_list = sorted(str_1+str_2)
+result = ''
+for i in new_list:
+	result += i
+print (result)
