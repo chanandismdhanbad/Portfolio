@@ -1,0 +1,12 @@
+str_1 = input('enter first sentence:\t')
+str_2 = input('enter second sentence:\t')
+new = []
+for i in str_1.split():
+	for j in str_2.split():
+		new.append(i+j)
+
+for i in str_2.split():
+	for j in str_1.split():
+		new.append(i+j)
+
+print (set(new))

@@ -1,9 +1,0 @@
-string = input('Enter any string:\t')
-combined=[]
-for word_1 in string.split():
-	for word_2 in string.split():
-		combined.append(word_1+word_2)
-
-set_1=set(combined)
-for i in set_1:
-	print (i)
