@@ -1,0 +1,17 @@
+str1 = input("enter any string:\t")
+set1 = set(str1)
+list_1 = list(set1)
+count_list = []
+for chars in set1:
+	count = str1.count(chars)
+	count_list.append(count)
+print (count_list)
+print (max(count_list))
+indx_list = []
+for counts in count_list:
+	if counts==max(count_list):
+		indx_list.append(count_list.index(counts))
+print (indx_list)
+
+for i in indx_list:
+	print (list_1[i])
