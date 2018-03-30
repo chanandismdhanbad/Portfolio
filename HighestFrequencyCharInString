@@ -1,0 +1,11 @@
+str_1 = list(input('enter any string:\t'))
+freq = []
+for chars in str_1:
+	freq.append(str_1.count(chars))
+new = []
+max_freq = max(freq)
+
+for i in range(len(freq)):
+	if freq[i]==max_freq:
+		new.append(str_1[i])
+print ('characters with highest frequency "',max_freq,'" are:\t',set(new))
