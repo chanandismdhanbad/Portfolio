@@ -1,0 +1,6 @@
+str_1 = input('enter any sentence:\t').lower()
+count=0
+for i in str_1.split():
+	if i=='the':
+		count = count+1
+print ('frequence of "the"=\t',count)
